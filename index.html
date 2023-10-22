@@ -18,41 +18,61 @@
 </head>
 
 <body>
-<article class="form_start">
-    <div class="form__information">
-      <h1 class="form__title">Stay updated!</h1>
-      <p class="form__paragraph">Join 60,000+ product managers receiving monthly updates on:</p>
+  <article class="form_start" id="section1">
+    <img src="/assets/images/illustration-sign-up-mobile.svg"
+      alt="A stylized image showing emails on a tomato red background" class="picture__mobile">
+    <div class="card__left">
+      <div>
+        <h1 class="form__title">Stay updated!</h1>
+        <p class="form__paragraph">Join 60,000+ product managers receiving monthly updates on:</p>
+      </div>
       <ol class="form__list">
         <li>Product discovery and building what matters</li>
         <li>Measuring to ensure updates are a success</li>
         <li>And much more!</li>
       </ol>
-      <div class="flex__flow">  
-          <label for="email" class="input__title">Email Address</label>
-          <input type="email" class="input__email" id="email" name="email"placeholder="email@company.com">
+      <div class="flex__flow">
+        <div>
+          <label for="email" class="label__email">Email Address</label>
+          <label for="email" class="label__valid" data-valid="true" id="label__valid">Valid email required</label>
+        </div>
+        <input type="email" class="input__email" id="email" name="email" placeholder="email@company.com"
+          data-valid="true">
+        <button class="button" id="button__submit">Subscribe to Monthly Newsletter</button>
       </div>
-        <button class="button">Subscribe to Monthly Newsletter</button>
+
     </div>
-    <picture class="form__picture"><img src="/assets/images/illustration-sign-up-desktop.svg" alt="A stylized image showing emails on a tomato red background"></picture>
-</article>
+    <div class="card__right">
+      <picture class="picture__desktop">
+        <img src="/assets/images/illustration-sign-up-desktop.svg"
+          alt="A stylized image showing emails on a tomato red background">
+      </picture>
+    </div>
+  </article>
 
   <!-- Sign-up form end -->
 
   <!-- Success message start -->
-<!-- 
-  <article class="form_complete">
-    Thanks for subscribing!
-    A confirmation email has been sent to ash@loremcompany.com.
-    Please open it and click the button inside to confirm your subscription.
-    Dismiss message
-  </article> -->
+
+  <article class="form__complete" id="section2">
+    <div class="form__complete__information">
+      <picture><img src="assets/images/icon-success.svg" alt="A white checkmark on a reddish circle"></picture>
+      <h1 class="form__title">Thanks for subscribing!</h1>
+      <p>
+        A confirmation email has been sent to <span id="span__email">ash@loremcompany.com.</span>
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+      <button class="button button__dismiss" id="button__dismiss">Dismiss message</button>
+    </div>
+  </article>
 
   <!-- Success message end -->
 
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Jordan Goyena-Segarra</a>.
-  </div>
+  </div> -->
 </body>
+<script src="script.js"></script>
 
 </html>
