@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     dismissButton.addEventListener("click", function () {
-        formStart.style.display = "flex";
+        formStart.style.display = "grid";
         formComplete.style.display = "none";
     });
 });
