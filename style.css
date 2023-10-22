@@ -1,110 +1,170 @@
 :root {
-    /* Primary Color */
-    --clr-tomato: hsl(4, 100%, 67%);
-    /* Neutral Colors */
-    --clr-dark-slate-grey: hsl(234, 29%, 20%);
-    --clr-charcoal-grey: hsl(235, 18%, 26%);
-    --clr-grey: hsl(231, 7%, 60%);
-    --clr-white: hsl(0, 0%, 100%);
+  /* Primary Color */
+  --clr-tomato: hsl(4, 100%, 67%);
+  --clr-tomato-shadow:hsla(4, 100%, 67%, 0.568);
+  /* Neutral Colors */
+  --clr-dark-slate-grey: hsl(234, 29%, 20%);
+  --clr-charcoal-grey: hsl(235, 18%, 26%);
+  --clr-grey: hsl(231, 7%, 60%);
+  --clr-white: hsl(0, 0%, 100%);
 
-    /* font info */
-    --fw-regular: 400;
-    --fw-bold: 700;
-    --fs-paragragh: 1rem;
-    --font-family: 'Roboto', sans-serif;
+  /* font info */
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fs-paragragh: 1rem;
+  --font-family: 'Roboto', sans-serif;
 }
 
 /* START CSS RESET */
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  /*
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
     2. Remove default margin
   */
-  * {
-    margin: 0;
-  }
-  /*
+* {
+  margin: 0;
+}
+
+/*
     Typographic tweaks!
     3. Add accessible line-height
     4. Improve text rendering
   */
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  /*
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
     5. Improve media defaults
   */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  /*
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
     6. Remove built-in form typography styles
   */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  /*
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
     7. Avoid text overflows
   */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  /*
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
     8. Create a root stacking context
   */
-  #root, #__next {
-    isolation: isolate;
-  }
-  /* END CSS RESET */
-  body {
-    background-color: var(--clr-charcoal-grey);
-    font-size: var(--fs-paragragh);
-    font-family: var(--font-family);
-    font-weight: var(--fw-regular);
-    color: var(--clr-dark-slate-grey);
-    /* center the cards */
-    display: grid;
-    min-height: 100vh;
-    place-content: center;
-  }
-  article {
-    border-radius: 2rem;
-    background-color: var(--clr-white);
-    padding: 1rem;
-    max-width: 930px;
-    gap: 1rem;
-  }
-  .form_start {
-    display: flex;
-    place-items: center;
-    justify-content: center;
-    gap: 3rem;
-  }
-  .form__information {
-    display: grid;
-    max-width: 375px;
-    gap: .5rem;
-    margin:5rem 1rem ;
-  }
-  .form__title {
-    font-size: 3.5rem;
-    font-weight: var(--fw-bold);
-  }
-  .input__title {
-    font-weight: var(--fw-bold);
-    font-size: .75rem;
-    margin-bottom: 0;
-  }
+#root,
+#__next {
+  isolation: isolate;
+}
 
-  .input__email {
-    
-  }
-  ol {
-    list-style-image: url(/assets/images/icon-list.svg);
-  }
+/* END CSS RESET */
+body {
+  background-color: var(--clr-charcoal-grey);
+  font-size: var(--fs-paragragh);
+  font-family: var(--font-family);
+  font-weight: var(--fw-regular);
+  color: var(--clr-dark-slate-grey);
+  /* center the cards */
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+}
+
+/* util */
+.flex__flow {
+  display: grid;
+}
+
+article {
+  border-radius: 2rem;
+  background-color: var(--clr-white);
+  padding: 1rem;
+  max-width: 930px;
+}
+
+.form_start {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+}
+
+.form__information {
+  display: grid;
+  max-width: 375px;
+  gap: 1.5rem;
+  margin: 3.25rem;
+}
+.form__picture {
+  margin: .5rem;
+}
+
+.form__title {
+  font-size: 3.5rem;
+  font-weight: var(--fw-bold);
+}
+
+.input__title {
+  font-weight: var(--fw-bold);
+  font-size: .75rem;
+  margin-bottom: 0;
+}
+
+.input__email {
+  padding: 1em 1.5em;
+  border-radius: .5rem;
+  border: 1px solid var(--clr-grey);
+}
+
+.button {
+  cursor: pointer;
+  background-color: var(--clr-dark-slate-grey);
+  color: var(--clr-white);
+  border-radius: .5rem;
+  border: 0;
+  gap: .75rem;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--fw-bold);
+  font-size: .925rem;
+}
+
+.button:is(:hover, :focus) {
+  background: rgb(255,83,121);
+  background: linear-gradient(158deg, rgba(255,83,121,1) 0%, rgba(255,104,61,1) 100%);
+  box-shadow: 0px .5rem 1rem -3px var(--clr-tomato-shadow);
+}
+
+ol {
+  list-style-image: url(/assets/images/icon-list.svg);
+}
